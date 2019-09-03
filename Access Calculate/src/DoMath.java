@@ -11,6 +11,7 @@ public class DoMath {
 		System.out.println(Calculate.average(2, 3, 4));
 		System.out.println(Calculate.toDegrees(2));
 		System.out.println(Calculate.toRadians(2));
+		System.out.println(Calculate.discriminant(2, 3, 4));
 	}
 
 }

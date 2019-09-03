@@ -32,8 +32,13 @@ public class Calculate {
 	public static double toRadians(double degree) {
 		double answer = degree * (3.14159/180);
 		return answer;
-	//A call to discriminant provides	
 	}
+	//A call to discriminant provides the coefficients of a quadratic equation in standard form (a, b, and c) and returns the value of the discriminant. The method accepts three doubles and returns a double.
+	public static double discriminant(double a, double b, double c) {
+		double answer = (b*b - 4*a*c);
+		return answer;
+	}
+	
 }
 
 
