@@ -38,7 +38,18 @@ public class Calculate {
 		double answer = (b*b - 4*a*c);
 		return answer;
 	}
-	
+	//A call toImproperFrac converts mixed number (with its pieces provided separately in the order whole number, numerator, then denominator) into an improper fraction. The method accepts three integers and returns a String. 
+	public static String toImproperFrac(int number1, int number2, int number3) {
+		return ((number1 * number3 + number2) + "/" + number3);
+	}
+	//A call to toMixedNum converts an improper fraction (with its pieces provided separately in the order numerator then denominator) into a mixed number. The method accepts two integers and returns a String.
+	public static String toMixedNum(int number1, int number2) {
+		return (number1/number2) + "_" + (number1%number2) + "/" + number2;
+	}
+	//A call to foil converts a binomial multiplication of the form (ax + b)(cx + d) into a quadratic equation of the form ax^2 + bx + c. The method accepts four integers and a string then returns a String.
+	public static String foil(int number1, int number2, int number3, int number4, String n) {
+		return (number1*number3 + "n^2" + " + " + (number1*number4 + number2*number3) + "n" + " + " + number2*number4);
+	}
 }
 
 
