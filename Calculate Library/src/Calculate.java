@@ -50,7 +50,12 @@ public class Calculate {
 	public static String foil(int number1, int number2, int number3, int number4, String n) {
 		return (number1*number3 + "n^2" + " + " + (number1*number4 + number2*number3) + "n" + " + " + number2*number4);
 	}
+	//A call to isDivisibleBy determines whether or not one integer is evenly divisivle by another. The method accepts two integers and returns a boolean.
+	public static boolean isDivisibleBy(int number1, int number2) {
+		return number1 % number2==0;
+	}
 }
+
 
 
 
