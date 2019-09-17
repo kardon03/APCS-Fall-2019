@@ -54,7 +54,100 @@ public class Calculate {
 	public static boolean isDivisibleBy(int number1, int number2) {
 		return number1 % number2==0;
 	}
+	//A call to absValue returns the absolute value of the number passed. The method accepts a double and returns a double.
+	public static double absValue(double number) {
+	if (number < 0) {
+		return number * -1;
+	}else {
+			return number;
+		}
+	}
+	//A call to max returns the larger of the values passed. The method accepts two doubles and returns a double. 
+	public static double max(double number1, double number2) {
+		if (number1 > number2) {
+			return number1;
+		}else {
+			return number2;
+		}
+	}
+	//Overload the max method. This one accepts three doubles and returns a double
+	public static double max(double number1, double number2, double number3) {
+		if (number1 > number2 && number1 > number3) {
+			return number1;
+		}else {
+			if (number2 > number1 && number2 > number3) {
+			return number2;
+		}else {
+			return number3;
+		}
+		}
+	}
+	//A call to min returns the smaller of the values passed. The method accepts two integers and returns an int.
+	public static int min(int number1, int number2) {
+		if (number1 > number2) {
+			return number2;
+		}else {
+			return number1;
+		}
+	}
+	//A call to round2 rounds a double correctly to 2 decimal places and returns a double.
+	public static double round2(double number) {
+		number = number*100 + 0.5;
+		number = (int) number;
+		return number/100;
+	}
+	//A call to exponent raises a value to a positive integer power. The method accepts a double and an integer and returns a double.
+	public static double exponent(double base, int power) {
+		double number = base;
+		for(int i = 2; i <= power; i++) {
+			base *= number;
+		}
+		return base;
+	}
+	//A call to factorial returns the factorial of the value passed. The method accepts an integer and returns an integer.
+	public static int factorial(int factor) {
+		int number = 1;
+		for(int i = 1; i<=factor; i++) {
+			number = number*i;
+		}
+		return number;
+	}
+	//A call to isPrime determines whether or not an integer is prime. This method accepts an integer and returns a boolean.}
+	public static boolean isPrime(int number) {
+		for(int i = 2; i < number; i++) {
+			if(isDivisibleBy(i, number))
+				return true;
+		}
+		return false;
+	}
 }
+	//A call to gcf finds the greatest common factor of two integers. The method accepts two positive integers and returns an integer. 
+			
+		
+	
+
+			
+		
+		
+	
+	
+
+
+
+		
+
+
+
+	
+			
+
+
+
+
+		
+	
+
+
 
 
 
