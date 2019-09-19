@@ -115,16 +115,26 @@ public class Calculate {
 	//A call to isPrime determines whether or not an integer is prime. This method accepts an integer and returns a boolean.}
 	public static boolean isPrime(int number) {
 		for(int i = 2; i < number; i++) {
-			if(isDivisibleBy(i, number))
-				return true;
+			if(isDivisibleBy(number, i)) 
+				return false;
 		}
-		return false;
+		return true;
 	}
-}
 	//A call to gcf finds the greatest common factor of two integers. The method accepts two positive integers and returns an integer. 
-			
+	public static int gcf(int number1, int number2) {
+		for(int i = 1; i<=number1 && i<=number2; i++) {
+			if(isDivisibleBy(number1, i) && isDivisibleBy(number2, i)) 
+				return i;
+		}
+		
+			return 0;
+	}
+	//A call to sqrt returns an approximation of the square root of the value passed, rounded to two decimal places. The method accepts a double and returns a double.
+
 		
 	
+}
+
 
 			
 		
