@@ -63,7 +63,7 @@ public class Calculate {
 		}
 	}
 	//A call to max returns the larger of the values passed. The method accepts two doubles and returns a double. 
-	public static double max(double number1, double number2) {
+	public static int max(int number1, int number2) {
 		if (number1 > number2) {
 			return number1;
 		}else {
@@ -122,18 +122,30 @@ public class Calculate {
 	}
 	//A call to gcf finds the greatest common factor of two integers. The method accepts two positive integers and returns an integer. 
 	public static int gcf(int number1, int number2) {
-		for(int i = 1; i<=number1 && i<=number2; i++) {
-			if(isDivisibleBy(number1, i) && isDivisibleBy(number2, i)) 
+		int a = max(number1, number2);
+		int b = min(number1, number2);
+		for(int i = 1; i > number1; i--) {
+			if(isDivisibleBy(a, i)) 
+			if(isDivisibleBy(b, i))
 				return i;
 		}
-		
-			return 0;
-	}
+		return 1;
+	}	
 	//A call to sqrt returns an approximation of the square root of the value passed, rounded to two decimal places. The method accepts a double and returns a double.
-
-		
+	public static double sqrt(int number) {
+		double ogNum;
+		double squareRoot = number/2;
+		do {
+			ogNum = squareRoot;
+			squareRoot = (ogNum + (number/ ogNum)) / 2;
+		} while (ogNum - squareRoot != 0); 
+			return round2(squareRoot);
+		}
+	}
+	//A call to quadForm uses the coefficients of a quadratic formula to approximate the real roots, if any. The method accepts three integers and returns a string.
 	
-}
+	
+
 
 
 			
