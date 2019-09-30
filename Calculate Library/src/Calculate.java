@@ -140,10 +140,17 @@ public class Calculate {
 			squareRoot = (ogNum + (number/ ogNum)) / 2;
 		} while (ogNum - squareRoot != 0); 
 			return round2(squareRoot);
-		}
 	}
 	//A call to quadForm uses the coefficients of a quadratic formula to approximate the real roots, if any. The method accepts three integers and returns a string.
-	
+	public static String quadForm(int a, int b, int c) {
+		if(discriminant(a,b,c)<0)	
+			return "no real roots";
+		double root1 = round2((-b + discriminant(a,b,c)) /2*a);
+		double root2 = round2((-b - discriminant(a,b,c)) /2*a);
+		String output = root1 + " and " + root2;
+		return output;
+	}
+}
 	
 
 
